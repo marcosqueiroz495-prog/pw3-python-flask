@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate Your Game</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        html, body {
+        height: 100%;
+        }
+
+        body {
+            background-color: #121212;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #1f1f1f;
+            padding: 30px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        
+
+        .container {
+            padding: 40px 20px;
+            flex: 1;
+        }
+
+        .descricao {
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+            font-size: 1.2rem;
+            color: #ccc;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: #1f1f1f;
+            padding: 20px;
+            border-radius: 10px;
+            width: 250px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            background-color: #2a2a2a;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #bbb;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #1f1f1f;
+        }
+
+        footer a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #3a86ff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        footer a:hover {
+            background-color: #265dbe;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Bem vindo ao Rate Your Game 🎮</h1>
+    </header>
+
+    <div class="container">
+        <p class="descricao">
+            Avalie seus jogos favoritos, descubra novas experiências e veja o que outras pessoas estão achando.
+        </p>
+
+        <div class="cards">
+
+            <a href="/lista">
+            <div class="card">
+                <h3>Descubra Novos Títulos</h3>
+                <p>Explore a lista e encontre jogos populares e bem avaliados.</p>
+            </div>
+            </a>
+
+            <a href="/formulario">
+            <div class="card">
+                <h3>Cadastre-se</h3>
+                <p><br>Crie sua conta para desfrutar do site por completo.</p>
+            </div>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <a href="/lista">Ver Lista de Jogos</a>
+        <a href="/formulario">Cadastrar Jogo</a>
+    </footer>
+
+</body>
+</html>
