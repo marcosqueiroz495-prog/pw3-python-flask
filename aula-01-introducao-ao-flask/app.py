@@ -13,13 +13,29 @@ app = Flask(__name__, template_folder='views')
 def home():
     return render_template('index.html')
 
+
+
 @app.route('/games')
 def games():
-    return render_template('games.html')
-
+    #criando variaveis para rota de games
+    titulo = "Portal 2"
+    ano = 2011
+    categoria = "Puzzle"
+    jogadores = ['Marcos', 'Richard', 'Miguel', 'Renato', 'Pedro']
+    return render_template('games.html', titulo = titulo, ano = ano, categoria = categoria, jogadores=jogadores)
+    #variavel do html = valor é a variavel do python
+    
+    
 @app.route('/consoles')
 def consoles():
-    return render_template('consoles.html')
+    # criando um objeto 
+    console = {"Nome":"Playstation 2",
+               "Fabricante":"Sony",
+               "Ano":2000}
+    return render_template('consoles.html',console=console)
+
+
+
 
 
 #iniciando servidor na porta 5000

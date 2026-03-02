@@ -6,7 +6,15 @@
     <title>Consoles</title>
 </head>
 <body>
-    <h1>Saiba sobre os novos consoles da próxima geração</h1>
+    <a href="/"><< Voltar</a>
+    <h1>Saiba tudo sobre consoles de todas gerações!</h1>
     <hr>
+    <h2>Console em destaque:</h2>
+    {% for chave, valor in console.items()%}
+    <details>
+        <summary>{{chave}}</summary>
+        <p> {{valor}} </p>
+    </details>
+    {% endfor %}
 </body>
 </html>
