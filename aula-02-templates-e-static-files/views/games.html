@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+    <a href="/"><< Voltar</a>
+    <h1>Página de games</h1>
+    <h3>Jogos de Xbox, Playstation, Nintendo e mais!</h3>
+    <hr>
+
+    <h2> Jogo em destaque</h2>
+    <p>Game mais jogado pelos nossos usuários</p>
+    <ul>
+        {# este é um comentario em jinja 2 (python e flask)#}
+        <li>Título: <strong>{{titulo}}</strong> </li>
+        <li>Ano: <strong>{{ano}}</strong></li>
+        <li>Categoria: <strong>{{categoria}}</strong> </li>
+        <li>O jogo {{titulo}} tem {{2026-ano}} anos! </li>
+    </ul>
+
+    {# estrutura de repetição {%       variaveis e expressoes {{}} #}
+    <h3>Top Players (Ranking de Jogadores)</h3>
+    <ol> <!--for produto in lista-->
+        {% for jogador in jogadores:%}
+        <li>{{jogador}}</li>
+        {% endfor %}
+    </ol>
+    {% endblock content %}
