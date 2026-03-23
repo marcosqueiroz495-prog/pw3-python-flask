@@ -4,7 +4,7 @@ from flask import Flask, render_template, request
 def init_app(app):
     #variaveis globais
     listaConsoles=['Playstation 5','Xbox one', 'Super Nintendo', 'Atari', '3DS']
-    
+    listaGames=[{'titulo':'CS-GO', 'ano' : 2012, 'categoria': 'FPS Online', 'plataforma' : 'Pc'}]    
     #criando a rota principal do site 
     @app.route('/')
     #def cria funções no python 
@@ -38,3 +38,12 @@ def init_app(app):
                 
         return render_template('consoles.html',console=console,
                                listaConsoles=listaConsoles)
+        
+        
+        ##cadastrar um jogo
+    @app.route('/cadgames', methods=['GET', 'POST'])
+    def cadgames():
+        if request.method=='POST':
+            #aq ele irá gravar os dados na lista
+            listaGames.append({'titulo': request.form.get('titulo'), 'ano': request.form.get('ano'), 'categoria' : request.form.get('categoria'), 'plataforma': request.form.get('plataforma')})
+        return render_template('cadgames.html', listaGames = listaGames)
