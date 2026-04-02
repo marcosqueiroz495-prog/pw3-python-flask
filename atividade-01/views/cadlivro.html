@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Cadastrar avaliação</title>
+<link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+
+<header>
+
+<h1>Cadastrar avaliação de livro</h1>
+
+<nav>
+<a href="/">Início</a>
+<a href="/livros">Ver livros avaliados</a>
+</nav>
+
+</header>
+
+<div class="container">
+
+<p>
+Preencha as informações abaixo para registrar uma nova avaliação
+de obra literária no sistema.
+</p>
+
+<form method="post">
+
+<input name="titulo" placeholder="Título da obra" required>
+
+<input name="autor" placeholder="Autor">
+
+<input name="ano" placeholder="Ano de publicação">
+
+<input name="nota" placeholder="Nota atribuída (0 a 10)">
+
+<button type="submit">Salvar avaliação</button>
+
+</form>
+
+<div class="acoes">
+
+<a href="/livros" class="botao">Ver tabela de livros</a>
+
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Usuários cadastrados</title>
+<link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+
+<header>
+
+<h1>Usuários cadastrados</h1>
+
+<nav>
+
+<a href="/">Início</a>
+<a href="/cadusuario">Cadastrar usuário</a>
+
+</nav>
+
+</header>
+
+<div class="container">
+
+<p>
+Lista de leitores registrados no sistema.
+</p>
+
+<table>
+
+<tr>
+<th>Nome</th>
+<th>Cidade</th>
+</tr>
+
+{% for user in listaUsuarios %}
+
+<tr>
+
+<td>{{user.nome}}</td>
+<td>{{user.cidade}}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</div>
+
+</body>
+</html>

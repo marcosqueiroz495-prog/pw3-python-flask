@@ -1,17 +1,9 @@
-from flask import Flask, render_template
-app= Flask(__name__,template_folder='views')
+from flask import Flask
+from controllers import routes
 
-@app.route('/')
-def home():
-    return render_template('index.html')
+app = Flask(__name__, template_folder='views')
 
-@app.route('/lista')
-def lista():
-    return render_template('lista.html')
+routes.init_app(app)
 
-@app.route('/formulario')
-def form():
-    return render_template('formulario.html')
-
-if __name__ == '__main__': 
-    app.run(port=5000, debug=True)
+if __name__ == '__main__':
+    app.run(port=4000, debug=True)

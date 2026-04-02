@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Livros avaliados</title>
+<link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+
+<header>
+
+<h1>Livros avaliados</h1>
+
+<nav>
+
+<a href="/">Início</a>
+<a href="/cadlivro">Cadastrar avaliação</a>
+
+</nav>
+
+</header>
+
+<div class="container">
+
+<p>
+A tabela abaixo apresenta as obras cadastradas no sistema
+e suas respectivas avaliações.
+</p>
+
+<table>
+
+<tr>
+<th>Título</th>
+<th>Autor</th>
+<th>Ano</th>
+<th>Nota</th>
+</tr>
+
+{% for livro in listaLivros %}
+
+<tr>
+
+<td>{{livro.titulo}}</td>
+<td>{{livro.autor}}</td>
+<td>{{livro.ano}}</td>
+<td>{{livro.nota}}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</div>
+
+</body>
+</html>
